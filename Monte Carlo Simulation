@@ -1,0 +1,41 @@
+import random
+import matplotlib.pyplot as plt
+fig=plt.figure(figsize=(13, 5))
+print ("Monte Carlo Simulation")
+
+
+Data=[1, -1]
+
+
+
+def Chub(Big_Chub):
+  Chubni=int(input("Enter the number of lines: "))
+  Chubster=int(input("Enter the number of simulations: "))
+  Jeb=0
+  while (Jeb<Chubni):
+    Mere_List=[]
+    a=0
+    b=0
+    x=0
+    z=0
+    aa=0
+    sa=0
+    xa=0
+    ya=0
+    Jeb=Jeb+1
+    x=random.choice(Big_Chub)
+    a=100+x
+    b=a/100
+    x=100*b
+    Mere_List.append(x)
+    while (z<Chubster-1):
+      ya=Big_Chub[-1]
+      xa=random.choice(Big_Chub)
+      aa=100+xa
+      ba=aa/100
+      sa=Mere_List[-1]*ba
+      Mere_List.append(sa)
+      z=z+1
+    print (Mere_List)
+    plt.plot(Mere_List)
+Chub(Data)
